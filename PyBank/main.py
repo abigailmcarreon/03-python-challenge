@@ -7,7 +7,6 @@ with open(budget_csv, newline = "") as csvfile:
     budgetreader=csv.reader(csvfile, delimiter = ",")
     
     csv_header = next(budgetreader)
-    #print(csv_header)
 
     total_months = []
     net_total = []
@@ -39,8 +38,6 @@ print("------------------------------------------------")
 print(f"Total Months: {len(total_months)}")
 print(f"Grand Total: ${sum(net_total)}")
 print(f"Average Change: ${round(sum(change)/len(change), 2)}")
-#------------------------------------------------------------------------
-# < & > profits
 
 greatestincrease = max(change)
 greatestdecrease = min(change)
